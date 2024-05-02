@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body onload="onInit()">
 <!-- Add to cart svg -->
 <div class="relative">
     <div class="w-28 h-28 flex place-items-center">
@@ -46,8 +46,8 @@
             </div>
             <div class="flex items-center space-x-2">
                 <button class="text-white">-</button>
-                <span class="text-white">1</span>
-                <button class="text-white">+</button>
+                <span class="text-white" id="quantityNumber">1</span>
+                <button class="text-white" id="addQuantity">+</button>
             </div>
         </div>
     </div>
