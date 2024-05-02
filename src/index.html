@@ -1,27 +1,31 @@
+<!-- run "npm run build:tailwind" to generate tailwind css and custom classes -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="all.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-
-    <!-- Add to cart svg -->
-    <div class="relative">
-        <div class="w-28 h-28 flex place-items-center">
-            <svg class="w-12 h-12 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
-            </svg>
-            <span class="absolute bottom-6  w-8 h-8 bg-red-600 rounded-full px-2 py-1 flex justify-center left-8 text-amber-50">0</span>
-        </div>
+<!-- Add to cart svg -->
+<div class="relative">
+    <div class="w-28 h-28 flex place-items-center">
+        <svg class="w-12 h-12 text-gray-800 dark:text-black" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+             width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        <span class="absolute bottom-6  w-8 h-8 bg-red-600 rounded-full px-2 py-1 flex justify-center left-8 text-amber-50">0</span>
     </div>
+</div>
 
-
-    <!-- Product Items Card -->
-    <div class="listProduct">
+<!-- Product Items Card -->
+<div class="productsContainer">
+    <div class="productBox">
         <div class="item">
-            <img src="../Assets/Images/brown-chair.png" alt="Brown Chair" class="w-full">
+            <img src="../Assets/Images/brown-chair.png" alt="Brown Chair" class="images">
             <div class="itemDetails">
                 <h2 class="itemName">Brown Chair</h2>
                 <div class="price">£300</div>
@@ -29,9 +33,32 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="bg-gray-400 h-full w-96 p-4 rounded-lg shadow-lg fixed top-0 right-0 flex flex-col justify-between">
+    <div>
+        <h1 class="text-white text-xl font-semibold mb-4">Shopping Cart</h1>
+        <div class="flex items-center mb-4">
+            <img src="../Assets/Images/brown-chair.png" alt="Brown Chair" class="w-12 h-12 rounded-full mr-4">
+            <div class="flex-grow">
+                <div class="text-white font-semibold">Name</div>
+                <div class="text-gray-300">£300</div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button class="text-white">-</button>
+                <span class="text-white">1</span>
+                <button class="text-white">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end space-x-4">
+        <button class="text-white">Close</button>
+        <button class="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded">Check Out</button>
+    </div>
+</div>
 
 
 
-
+<script src="script.js"></script>
 </body>
 </html>
